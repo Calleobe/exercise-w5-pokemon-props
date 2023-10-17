@@ -1,4 +1,13 @@
 // Destructure pokemon types props here :)
-export const Type = () => {
-  return <div>Type</div>;
+/* eslint-disable react/prop-types */
+export const Type = ({ types }) => {
+  return (
+    <div>
+      {types.map((type, index) => (
+        <span key={index} className="pokemon-type">
+          {type}
+        </span>
+      ))}
+    </div>
+  );
 };
